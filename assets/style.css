@@ -1,0 +1,56 @@
+/* Navigation Bar */
+nav {
+    background-color: 292075;
+    padding: 20px;
+    color: white;
+}
+
+/* Title in Navigation Bar */
+.home {
+    text-decoration: none;
+    color: white;
+}
+
+/* Main Section */
+.main {
+    text-align: center;
+    background-color: 00b5ef;
+    color: black;
+    padding: 20px;
+}
+
+/* Button */
+.button {
+    background-color: 292075;
+    color: white;
+}
+
+/* Form Input */
+input {
+    max-width: 330px;
+    margin: auto;
+}
+
+/* Form Labels */
+label {
+    font-weight: bold;
+}
+
+/* Carousel */
+.carousel{
+    background-color: 292075;
+}
+
+/* Carousel Inner */
+.carousel-inner {
+    margin: auto;
+    max-width: 44%;
+}
+
+/* Contact Section */
+.contact {
+    padding: 20px;
+    text-align: center;
+    background-color: black;
+    color: white;
+}
