@@ -1,5 +1,4 @@
 class Bank {
-
     // Account Details
     static getAccountDetails() {
         var accountDetails = {
@@ -11,7 +10,6 @@ class Bank {
         }
         return accountDetails;
     }
-
     // Open Account Function
     static register() {
         var password = document.getElementById('password').value;
@@ -34,7 +32,6 @@ class Bank {
         }
         return true;
     }
-
     // Login Function
     static login() {
         var acno = document.getElementById('acno').value;
@@ -60,7 +57,6 @@ class Bank {
             alert("User does not exist!");
         }
     }
-
     // Deposit Function
     static deposit() {
         var acno = document.getElementById('acno').value;
@@ -78,7 +74,6 @@ class Bank {
                 alert("Incorrect PIN!");
         }
     }
-
     // Withdraw Function
     static withdraw() {
         var acno = document.getElementById('acno').value;
@@ -96,7 +91,6 @@ class Bank {
                 alert("Incorrect PIN!");
         }
     }
-
     // Display Account Details on Deposit Page
     static ddeposit() {
         var x = document.getElementById('acno').value;
@@ -108,7 +102,6 @@ class Bank {
             document.getElementById('dbal').innerHTML = "Your current balance is ₹" + dbal + ".";
         }
     }
-
     // Display Account Details on Withdraw Page
     static dwithdraw() {
         var x = document.getElementById('acno').value;
@@ -120,5 +113,4 @@ class Bank {
             document.getElementById('dbal').innerHTML = "Your current balance is ₹" + dbal + ".";
         }
     }
-
 }
