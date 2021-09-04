@@ -12,10 +12,33 @@ class Bank {
     }
     // Open Account Function
     static register() {
+        var name = document.getElementById('name').value;
+        var pin = document.getElementById('pin').value;
+        var acno = document.getElementById('acno').value;
         var password = document.getElementById('password').value;
         var confirm = document.getElementById('confirm').value;
+        if (name == "") {
+            alert("What's your name?");
+            return false;
+        }
+        if (pin == "") {
+            alert("Enter new PIN (max. 4 digits)");
+            return false;
+        }
+        if (acno == "") {
+            alert("Enter new account number.");
+            return false;
+        }
+        if (password == "") {
+            alert("Enter new password.");
+            return false;
+        }
         if (password.length < 8) {
             alert("Enter a combination of at least eight characters.");
+            return false;
+        }
+        if (confirm == "") {
+            alert("Confirm new password.");
             return false;
         }
         if (password != confirm) {
@@ -24,7 +47,7 @@ class Bank {
         }
         if (document.getElementById('agree').checked) {
             alert("Account Opened Successfully!");
-            window.location.href = "user_login.html";
+            window.location.href = "login.html";
         }
         else {
             alert("Please agree to our Terms and Conditions.");
@@ -36,6 +59,14 @@ class Bank {
     static login() {
         var acno = document.getElementById('acno').value;
         var password = document.getElementById('password').value;
+        if (acno == "") {
+            alert("Enter account number.");
+            return false;
+        }
+        if (password == "") {
+            alert("Enter password.");
+            return false;
+        }
         try {
             if (isNaN(acno)) throw "Not a valid account Number!";
         }
@@ -47,7 +78,7 @@ class Bank {
             let pwd = data[acno].password;
             if (pwd == password) {
                 alert("Logged In Successfully!");
-                window.location.href = "user/home.html";
+                window.location.href = "home.html";
             }
             else {
                 alert("Incorrect account number or Password!");
@@ -62,6 +93,18 @@ class Bank {
         var acno = document.getElementById('acno').value;
         var pin = document.getElementById('pin').value;
         var amount = Number(document.getElementById('amount').value);
+        if (acno == "") {
+            alert("Enter account number.");
+            return false;
+        }
+        if (pin == "") {
+            alert("Enter PIN.");
+            return false;
+        }
+        if (amount == "") {
+            alert("Enter amount.");
+            return false;
+        }
         var data = Bank.getAccountDetails();
         if (acno in data) {
             let mpin = data[acno].pin;
@@ -79,6 +122,18 @@ class Bank {
         var acno = document.getElementById('acno').value;
         var pin = document.getElementById('pin').value;
         var amount = Number(document.getElementById('amount').value);
+        if (acno == "") {
+            alert("Enter account number.");
+            return false;
+        }
+        if (pin == "") {
+            alert("Enter PIN.");
+            return false;
+        }
+        if (amount == "") {
+            alert("Enter amount.");
+            return false;
+        }
         var data = Bank.getAccountDetails();
         if (acno in data) {
             var mpin = data[acno].pin

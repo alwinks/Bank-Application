@@ -1,24 +1,25 @@
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Deposit Amount - Sample Bank of India</title>
+    <title>Home - Sample Bank of India</title>
     <!-- Bootstrap Files -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
         crossorigin="anonymous"></script>
-    <!-- Main CSS, JS Files -->
-    <link rel="stylesheet" href="../assets/style.css">
-    <script src="../assets/bank.js"></script>
+    <!-- Main CSS File -->
+    <link rel="stylesheet" href="assets/style.css">
 </head>
+
 <body>
     <!-- Navigation Bar -->
     <nav class="home navbar navbar-expand-lg navbar-dark">
         <div class="container-fluid">
-            <a class="navbar-brand" href="../index.html">
+            <a class="navbar-brand" href="index.html">
                 <h1><b>SBI</b></h1>
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -29,10 +30,10 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link" href="home.html">Home</a>
+                        <a class="nav-link active" href="home.html">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="../user_login.html">Logout</a>
+                        <a class="nav-link" href="login.html">Logout</a>
                     </li>
                 </ul>
             </div>
@@ -41,21 +42,37 @@
     <!-- End Navigation Bar -->
     <!-- Main Section -->
     <div class="main">
-        <h1><b>Deposit Amount</b></h1>
-        <h3 id="dname"></h3>
-        <h4 id="dbal"></h4>
-        <form class="form-group ">
-            <label for="acno">Account Number</label><br>
-            <input class="form-control" oninput="Bank.ddeposit()" type="number" maxlength="5"
-                placeholder="Enter account number" id="acno" required><br>
-            <label for="pin">PIN</label><br>
-            <input class="form-control" type="password" id="pin" maxlength="4" placeholder="Enter PIN" required><br>
-            <label for="amount">Amount</label><br>
-            <input class="form-control" type="number" maxlength="5" placeholder="Enter amount" id="amount" required><br>
-            <input type="button" class="btn button" onclick="Bank.deposit()" value="Deposit">
-        </form>
+        <h1><b>Sample Bank of India</b></h1>
+        <h5><i>The Banker to Every Indian.</i></h5><br>
+        <a href="deposit.html" role="button" class="btn button">Deposit</a>
+        <a href="withdraw.html" role="button" class="btn button">Withdraw</a><br><br>
+        <p>SBI's internet banking portal provides personal banking services<br>that gives you complete control over all
+            your banking demands online.</p>
     </div>
     <!-- End Main Section -->
+    <!-- Carousel -->
+    <div id="demo" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="assets/img/banner24.jpg" class="d-block w-100">
+            </div>
+            <div class="carousel-item">
+                <img src="assets/img/banner25.jpg" class="d-block w-100">
+            </div>
+            <div class="carousel-item">
+                <img src="assets/img/banner29.jpg" class="d-block w-100">
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+    <!-- End Carousel -->
     <!-- Contact Section -->
     <div class="contact">
         <h3>Contact Us</h3>
@@ -64,4 +81,5 @@
     </div>
     <!-- End Contact Section -->
 </body>
+
 </html>
