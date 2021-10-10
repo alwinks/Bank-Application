@@ -46,7 +46,7 @@ class Bank {
             return false;
         }
         if (document.getElementById('agree').checked) {
-            alert("Account Opened Successfully!");
+            alert("Account opened successfully!");
             window.location.href = "login.html";
         }
         else {
@@ -68,7 +68,7 @@ class Bank {
             return false;
         }
         try {
-            if (isNaN(acno)) throw "Not a valid account Number!";
+            if (isNaN(acno)) throw "Not a valid account number!";
         }
         catch (err) {
             alert(err);
@@ -81,7 +81,7 @@ class Bank {
                 window.location.href = "home.html";
             }
             else {
-                alert("Incorrect account number or Password!");
+                alert("Incorrect account number or password!");
             }
         }
         else {

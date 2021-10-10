@@ -49,12 +49,12 @@
         <p id="dbal"></p>
         <form class="form-group ">
             <label for="acno">Account Number</label><br>
-            <input class="form-control" oninput="Bank.ddeposit()" type="number" maxlength="5"
+            <input class="form-control" oninput="Bank.ddeposit()" value="1001" type="number" maxlength="4"
                 placeholder="Enter account number" id="acno" required><br>
             <label for="pin">PIN</label><br>
-            <input class="form-control" type="password" id="pin" maxlength="4" placeholder="Enter PIN" required><br>
+            <input class="form-control" type="password" id="pin" value="1234" maxlength="4" placeholder="Enter PIN" required><br>
             <label for="amount">Amount</label><br>
-            <input class="form-control" type="number" maxlength="5" placeholder="Enter amount" id="amount" required><br>
+            <input class="form-control" type="number" maxlength="5" value="500" placeholder="Enter amount" id="amount" required><br>
             <input type="button" class="btn button" onclick="Bank.deposit()" value="Deposit">
         </form>
     </div>
